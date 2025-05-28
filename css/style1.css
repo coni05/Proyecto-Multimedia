@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background: #1c1c1c;
+  color: #fff;
+  padding: 10px 0;
+}
+
+header .contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.blanco {
+  color: white;
+}
+
+.azul {
+  color: #00aaff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #00aaff;
+}
+
+.encabezado {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.img-encabezado {
+
+  width: 100%;
+  height: 400px;
+  display: block;
+}
+
+.texto-encabezado {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 3px black;
+  padding: 0 20px;
+}
+
+.texto-encabezado h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.boletin {
+  background: #333;
+  color: white;
+  padding: 30px;
+  display: flex; /* Habilitamos Flexbox en el contenedor */
+  justify-content: space-around; 
+  align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+}
+
+.boletin h2 {
+  text-align: left; /* Aseguramos que el texto esté alineado a la izquierda */
+}
+
+.boletin form {
+  display: flex; /* Habilitamos Flexbox también en el formulario para los inputs */
+  gap: 10px; /* Agregamos un pequeño espacio entre el input y el botón */
+}
+
+.boletin input[type="email"] {
+  padding: 10px;
+  width: 250px;
+  border: none;
+}
+
+.boletin input[type="submit"] {
+  padding: 10px 20px;
+  background: #e8491d;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.servicios {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 20px;
+  background: white;
+  flex-wrap: wrap;
+}
+
+.servicio {
+  max-width: 300px;
+  text-align: center;
+}
+
+.servicio img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+footer {
+  background: #00aaff;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
