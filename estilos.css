@@ -16,6 +16,7 @@ header {
   justify-content: space-between;
   padding: 15px 30px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -31,6 +32,7 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 nav ul li a {
@@ -56,11 +58,13 @@ nav ul li a.activo {
 .form-boletin {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .form-boletin input {
   padding: 8px;
-  flex: 1;
+  flex: 1 1 200px;
+  min-width: 150px;
 }
 
 .form-boletin button {
@@ -69,6 +73,7 @@ nav ul li a.activo {
   color: white;
   border: none;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 .contenido {
@@ -76,10 +81,11 @@ nav ul li a.activo {
   padding: 20px 30px;
   gap: 20px;
   background-color: #eee;
+  flex-wrap: wrap;
 }
 
 .formulario {
-  flex: 1;
+  flex: 1 1 300px;
 }
 
 .formulario h3 {
@@ -112,7 +118,9 @@ nav ul li a.activo {
 }
 
 .info {
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
+  flex: 1 1 300px;
 }
 
 .que-hacemos {
@@ -137,4 +145,51 @@ footer {
   text-align: center;
   padding: 10px;
   font-size: 14px;
+}
+
+/* Media Queries para pantallas menores a 500px */
+@media (max-width: 500px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding-top: 10px;
+  }
+
+  .form-boletin {
+    flex-direction: column;
+  }
+
+  .contenido {
+    flex-direction: column;
+  }
+
+  .info {
+    max-width: 100%;
+  }
+}
+
+/* Media Queries para pantallas menores a 480px */
+@media (max-width: 480px) {
+  .formulario input,
+  .formulario textarea,
+  .formulario button,
+  .form-boletin input,
+  .form-boletin button {
+    width: 100%;
+  }
+
+  header {
+    padding: 15px 15px;
+  }
+
+  .boletin,
+  .contenido {
+    padding: 20px 15px;
+  }
 }
